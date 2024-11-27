@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Cody\\myCodeDir\\Libraries\\Direction-Library\\Direction_Libray\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BB577FE0-B4A5-4537-9BC6-2D73A59CDD2C}|Direction_Library.Tests\\Direction_Library.Tests.csproj|c:\\users\\cody\\mycodedir\\libraries\\direction-library\\direction_libray\\direction_library.tests\\rotationclasstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB577FE0-B4A5-4537-9BC6-2D73A59CDD2C}|Direction_Library.Tests\\Direction_Library.Tests.csproj|solutionrelative:direction_library.tests\\rotationclasstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9B27DA1-8BB5-4FAC-8A09-AC7E4678B730}|Direction_Libray\\Direction_Library.csproj|c:\\users\\cody\\mycodedir\\libraries\\direction-library\\direction_libray\\direction_libray\\rotation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9B27DA1-8BB5-4FAC-8A09-AC7E4678B730}|Direction_Libray\\Direction_Library.csproj|solutionrelative:direction_libray\\rotation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB577FE0-B4A5-4537-9BC6-2D73A59CDD2C}|Direction_Library.Tests\\Direction_Library.Tests.csproj|c:\\users\\cody\\mycodedir\\libraries\\direction-library\\direction_libray\\direction_library.tests\\direction_library.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{BB577FE0-B4A5-4537-9BC6-2D73A59CDD2C}|Direction_Library.Tests\\Direction_Library.Tests.csproj|solutionrelative:direction_library.tests\\direction_library.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Rotation.cs",
+              "DocumentMoniker": "C:\\Users\\Cody\\myCodeDir\\Libraries\\Direction-Library\\Direction_Libray\\Direction_Libray\\Rotation.cs",
+              "RelativeDocumentMoniker": "Direction_Libray\\Rotation.cs",
+              "ToolTip": "C:\\Users\\Cody\\myCodeDir\\Libraries\\Direction-Library\\Direction_Libray\\Direction_Libray\\Rotation.cs",
+              "RelativeToolTip": "Direction_Libray\\Rotation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T23:43:23.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RotationClassTests.cs",
+              "DocumentMoniker": "C:\\Users\\Cody\\myCodeDir\\Libraries\\Direction-Library\\Direction_Libray\\Direction_Library.Tests\\RotationClassTests.cs",
+              "RelativeDocumentMoniker": "Direction_Library.Tests\\RotationClassTests.cs",
+              "ToolTip": "C:\\Users\\Cody\\myCodeDir\\Libraries\\Direction-Library\\Direction_Libray\\Direction_Library.Tests\\RotationClassTests.cs",
+              "RelativeToolTip": "Direction_Library.Tests\\RotationClassTests.cs",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAUwGoAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T23:43:50.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Direction_Library.Tests",
+              "DocumentMoniker": "C:\\Users\\Cody\\myCodeDir\\Libraries\\Direction-Library\\Direction_Libray\\Direction_Library.Tests\\Direction_Library.Tests.csproj",
+              "RelativeDocumentMoniker": "Direction_Library.Tests\\Direction_Library.Tests.csproj",
+              "ToolTip": "C:\\Users\\Cody\\myCodeDir\\Libraries\\Direction-Library\\Direction_Libray\\Direction_Library.Tests\\Direction_Library.Tests.csproj",
+              "RelativeToolTip": "Direction_Library.Tests\\Direction_Library.Tests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-27T23:43:18.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
