@@ -1,5 +1,6 @@
 using FluentAssertions;
-namespace Direction_Library.Tests;
+using Physics2DLibrary;
+namespace Direction_Library.Tests.RotationClass;
 
 public class RotationClassConstraintTests {
     [Fact]
@@ -221,8 +222,17 @@ public class RotationClassAssignsToCoordinatesTests {
     [InlineData(-10, -10, 225)]
     [InlineData(0, -10, 270)]
     [InlineData(10, -10, 315)]
+    [InlineData(77.74, 98.37, 52)]
+    [InlineData(-28.09, -5.60, 191)]
+    [InlineData(-46.99, -54.87, 229)]
     public void RotationAngleFromCoordinatesWorks(
         double coordX, double coordY, int outAngle) {
-
+        Rotation r = new Rotation();
+        r.AssignToCoordinates(coordX, coordY);
+        r.RotationAngle.Should().Be(outAngle);
     }
 }
+
+
+
+
