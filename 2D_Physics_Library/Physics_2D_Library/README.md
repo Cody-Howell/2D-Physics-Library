@@ -12,3 +12,11 @@ line definitions, overlaps, and maybe include some math classes to calculate mor
 I add XML Comments (the ones VS Code and Visual Studio usually read for their Intellisense) to every property, method, and class, 
 so I hope those are of a bit more use to you than a generalized readme. I also intend to add an external documentation page 
 for all the classes and methods I generate here. That is for some future day, though. 
+
+## Changelog
+0.2.5 (12/7/24) - Completed Rotation class
+	- DistanceTo, AverageTo, Cloning Constructor, IEquatable, and IComparable methods added
+	- Overrode operators + (addition), - (subtraction), % (modulo), and ^ (average of two angles)
+	- Ensured XML comments were included in the package
+	- Test cases up to 148
+0.2.0 (12/6/24) - Added Rotation class

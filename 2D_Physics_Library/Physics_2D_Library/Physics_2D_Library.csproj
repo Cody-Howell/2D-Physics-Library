@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <Version>0.2.1</Version>
+    <Version>0.2.5</Version>
     <Authors>Howl Dev</Authors>
     <Description>A compilation of useful 2D coordinate/physics classes.</Description>
     <PackageTags>physics</PackageTags>
@@ -13,12 +13,22 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <ReleaseNotes>
+      - DistanceTo, AverageTo, Cloning Constructor, IEquatable, and IComparable methods added
+      - Overrode operators + (addition), - (subtraction), % (modulo), and ^ (average of two angles)
+      - Ensured XML comments were included in the package
+    </ReleaseNotes>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="bin\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <None Remove="bin\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Include="HowlDevLogo.png" Pack="true" PackagePath="./HowlDevLogo.png" />
     <None Include="README.md" Pack="true" PackagePath="./README.md" />
-    <None Include="bin\Release\net8.0\Physics_2d_Library.xml" Pack="true" PackagePath="lib\net8.0\" />
   </ItemGroup>
 
 </Project>

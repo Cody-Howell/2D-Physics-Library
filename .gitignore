@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/2D_Physics_Library/TestLibrary/TestLibrary.csproj
+/2D_Physics_Library/TestLibrary
