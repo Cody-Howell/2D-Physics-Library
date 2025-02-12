@@ -9,15 +9,10 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/Cody-Howell/2D-Physics-Library</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageIcon>HowlDevLogo.png</PackageIcon>
+    <PackageIcon>_HowlDevLogo.png</PackageIcon>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <ReleaseNotes>
-      - DistanceTo, AverageTo, Cloning Constructor, IEquatable, and IComparable methods added
-      - Overrode operators + (addition), - (subtraction), % (modulo), and ^ (average of two angles)
-      - Ensured XML comments were included in the package
-    </ReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,8 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="HowlDevLogo.png" Pack="true" PackagePath="./HowlDevLogo.png" />
     <None Include="README.md" Pack="true" PackagePath="./README.md" />
+    <AdditionalFiles Include="_SharedXML.xml" />
   </ItemGroup>
 
 </Project>

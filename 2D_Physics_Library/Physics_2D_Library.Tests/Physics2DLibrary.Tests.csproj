@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Physics_2D_Library\Physics_2D_Library.csproj" />
+    <ProjectReference Include="..\Physics_2D_Library\Physics2DLibrary.csproj" />
   </ItemGroup>
 
   <ItemGroup>
