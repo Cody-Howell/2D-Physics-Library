@@ -1,6 +1,7 @@
 using Physics2DLibrary;
 using System.Net.WebSockets;
-namespace Physics_2D_Library.Tests.LineClass;
+namespace Physics2DLibrary.TUnit.LineClass;
+
 
 public class LineClassBasicTests {
     [Test]

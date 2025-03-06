@@ -370,7 +370,8 @@ public class RotationClassAverageToTests {
         double average) {
         Rotation2D r1 = new Rotation2D();
         Rotation2D r2 = new Rotation2D();
-        await Assert.That(() => r1.AverageTo(r2, average)).Throws<ArgumentOutOfRangeException>()
+        await Assert.That(() => r1.AverageTo(r2, average))
+            .Throws<ArgumentOutOfRangeException>()
             .WithMessage("Percent must be between 0 and 1. (Parameter 'percent')");
     }
 }
@@ -472,6 +473,20 @@ public class RotationClassModuloOperatorTests {
         Rotation2D r2 = new Rotation2D(rot2);
         Rotation2D answer = r1 % r2;
         await Assert.That(answer.RotationAngle).IsEqualTo(outAngle);
+    }
+}
+public class RotationClassImplicitOperatorTests {
+    [Test]
+    public async Task ImplicitConstructorAndExplicitReaderTest() {
+        Rotation2D r1 = 90;
+        await Assert.That(r1).IsEqualTo(90); // Apparently this also works
+    }
+
+    [Test]
+    public async Task ExplicitSecondTest() {
+        Rotation2D r1 = new Rotation2D(90);
+        double d = (double)r1;
+        await Assert.That(d).IsEqualTo(90);
     }
 }
 public class RotationClassEqualityInterfaceTests {

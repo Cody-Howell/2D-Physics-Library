@@ -1,52 +1,53 @@
-﻿using FluentAssertions;
-namespace Physics2DLibrary.Tests.VectorObject;
+﻿using TUnit;
+namespace Physics2DLibrary.TUnit.VectorObject;
+
 
 public class VectorObjectSimpleConstructorTests {
-    [Fact]
-    public void Ctor1() {
+    [Test]
+    public async Task Ctor1() {
         VectorObject2D obj = new VectorObject2D();
-        obj.CenterPoint.Equals(new Point2D()).Should().BeTrue();
+        await Assert.That(obj.CenterPoint.Equals(new Point2D())).IsTrue();
     }
 
-    [Fact]
-    public void Ctor2() {
+    [Test]
+    public async Task Ctor2() {
         VectorObject2D obj = new VectorObject2D(new Point2D(3, 4), new List<Vector2D> { new Vector2D(0, 1), new Vector2D(90, 1) });
-        obj.CenterPoint.Equals(new Point2D(3, 4)).Should().BeTrue();
-        obj[0].Equals(new Point2D(4, 4)).Should().BeTrue();
-        obj[1].Equals(new Point2D(3, 5)).Should().BeTrue();
+        await Assert.That(obj.CenterPoint.Equals(new Point2D(3, 4))).IsTrue();
+        await Assert.That(obj[0].Equals(new Point2D(4, 4))).IsTrue();
+        await Assert.That(obj[1].Equals(new Point2D(3, 5))).IsTrue();
     }
 
-    [Fact]
-    public void Ctor3() {
+    [Test]
+    public async Task Ctor3() {
         VectorObject2D obj = new VectorObject2D(new Point2D(3, 4), new List<Point2D> { new Point2D(4, 4), new Point2D(3, 5) });
-        obj.CenterPoint.Equals(new Point2D(3, 4)).Should().BeTrue();
-        obj[0].Equals(new Point2D(4, 4)).Should().BeTrue();
-        obj[1].Equals(new Point2D(3, 5)).Should().BeTrue();
+        await Assert.That(obj.CenterPoint.Equals(new Point2D(3, 4))).IsTrue();
+        await Assert.That(obj[0].Equals(new Point2D(4, 4))).IsTrue();
+        await Assert.That(obj[1].Equals(new Point2D(3, 5))).IsTrue();
     }
 }
 public class VectorObjectEnumerationTests {
-    [Fact]
-    public void DefaultEnumerator() {
+    [Test]
+    public async Task DefaultEnumerator() {
         VectorObject2D obj = new VectorObject2D(new Point2D(3, 4), new List<Point2D> { new Point2D(4, 4), new Point2D(3, 5) });
-        Assert.Throws<EntryPointNotFoundException>(obj.GetEnumerator);
+        Assert.Throws<EntryPointNotFoundException>(() => obj.GetEnumerator());
 
         //foreach (Point2D point in obj) {
         //    // Should throw error, just for display.
         //}
     }
 
-    [Fact]
-    public void PointEnumerator() {
+    [Test]
+    public async Task PointEnumerator() {
         VectorObject2D obj = new VectorObject2D(new Point2D(3, 4), new List<Point2D> { new Point2D(4, 4), new Point2D(3, 5) });
         Point2D[] answers = { new Point2D(4, 4), new Point2D(3, 5) };
         int answersIndex = 0;
         foreach (Point2D point in obj.GetPoints()) {
-            answers[answersIndex++].Equals(point).Should().BeTrue();
+            await Assert.That(answers[answersIndex++].Equals(point)).IsTrue();
         }
     }
 
-    [Fact]
-    public void LineEnumerator() {
+    [Test]
+    public async Task LineEnumerator() {
         VectorObject2D obj = new VectorObject2D(new Point2D(0, 0), new List<Point2D> { 
             new Point2D(1, 0), new Point2D(0, 1),
             new Point2D(-1, 0), new Point2D(0, -1)
@@ -59,26 +60,26 @@ public class VectorObjectEnumerationTests {
         };
         int answersIndex = 0;
         foreach (Line2D line in obj.GetLines()) {
-            answers[answersIndex++].Equals(line).Should().BeTrue();
+            await Assert.That(answers[answersIndex++].Equals(line)).IsTrue();
         }
     }
 }
 public class VectorObjectPointWithinTests {
-    [Theory]
-    [InlineData(4, 9, true)]
-    [InlineData(-10, 15, false)]
-    [InlineData(6, 0.1, true)]
-    [InlineData(20, 2, false)]
-    [InlineData(9, 19, false)]
-    [InlineData(8, 2, true)]
-    [InlineData(2, 17, false)]
-    [InlineData(4, -3, false)]
-    [InlineData(12, -5, false)]
-    [InlineData(-3, 19, false)]
-    [InlineData(9, 6, true)]
-    [InlineData(-1, 13, false)]
-    [InlineData(5, 5, true)]
-    public void ActualInsideTests(
+    [Test]
+    [Arguments(4, 9, true)]
+    [Arguments(-10, 15, false)]
+    [Arguments(6, 0.1, true)]
+    [Arguments(20, 2, false)]
+    [Arguments(9, 19, false)]
+    [Arguments(8, 2, true)]
+    [Arguments(2, 17, false)]
+    [Arguments(4, -3, false)]
+    [Arguments(12, -5, false)]
+    [Arguments(-3, 19, false)]
+    [Arguments(9, 6, true)]
+    [Arguments(-1, 13, false)]
+    [Arguments(5, 5, true)]
+    public async Task ActualInsideTests(
     double x, double y, bool isInside) {
         List<Point2D> points = new List<Point2D> {
             new Point2D(0, 10),
@@ -87,21 +88,21 @@ public class VectorObjectPointWithinTests {
             new Point2D(0, 0)
         };
         VectorObject2D obj = new VectorObject2D(new Point2D(5, 5), points);
-        obj.IsPointWithin(new Point2D(x, y)).Should().Be(isInside);
+        await Assert.That(obj.IsPointWithin(new Point2D(x, y))).IsEqualTo(isInside);
     }
 }
 public class VectorObjectEqualityTests {
-    [Fact]
-    public void BasicTest1() {
+    [Test]
+    public async Task BasicTest1() {
         VectorObject2D v1 = new VectorObject2D(new Point2D(0, 0), new List<Point2D> { new Point2D(1, 2), new Point2D(1, 2), new Point2D(1, 2) });
         VectorObject2D v2 = new VectorObject2D(new Point2D(0, 0), new List<Point2D> { new Point2D(1, 2), new Point2D(1, 2), new Point2D(1, 2) });
 
-        v1.Equals(v2).Should().BeTrue();
+        await Assert.That(v1.Equals(v2)).IsTrue();
     }
 }
 public class VectorObjectRotateByTests {
-    [Fact]
-    public void EmptyTest() {
+    [Test]
+    public async Task EmptyTest() {
         VectorObject2D obj = new VectorObject2D(
             new Point2D(0, 0), 
             new List<Vector2D> {
@@ -113,14 +114,14 @@ public class VectorObjectRotateByTests {
         obj.RotateBy(new List<IPointObject2D>(), 90);
 
         List<Point2D> newPoints = new List<Point2D>(obj);
-        newPoints[0].Equals(new Point2D(0, 1)).Should().BeTrue();
-        newPoints[1].Equals(new Point2D(-1, 0)).Should().BeTrue();
-        newPoints[2].Equals(new Point2D(0, -1)).Should().BeTrue();
-        newPoints[3].Equals(new Point2D(1, 0)).Should().BeTrue();
+        await Assert.That(newPoints[0].Equals(new Point2D(0, 1))).IsTrue();
+        await Assert.That(newPoints[1].Equals(new Point2D(-1, 0))).IsTrue();
+        await Assert.That(newPoints[2].Equals(new Point2D(0, -1))).IsTrue();
+        await Assert.That(newPoints[3].Equals(new Point2D(1, 0))).IsTrue();
     }
 
-    //[Fact]
-    //public void NextToWallTest() {
+    //[Test]
+    //public async Task NextToWallTest() {
     //    // (1, 0), (0, 1), (-1, 0), (0, -1)
     //    VectorObject2D obj = new VectorObject2D(
     //        new Point2D(0, 0),
@@ -161,6 +162,6 @@ public class VectorObjectRotateByTests {
 
     //    obj.RotateBy(new List<IPointObject2D>() { wall1, wall2 }, 30);
 
-    //    obj.Equals(answer).Should().BeTrue();
+    //    await Assert.That(obj.Equals(answer)).IsTrue();
     //}
 }

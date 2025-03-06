@@ -174,12 +174,12 @@ public class VectorObject2D : IPointObject2D, IComparable<VectorObject2D>, IEqua
         throw new EntryPointNotFoundException("Please use GetPoints() or GetLines() methods.");
     }
 
-    IEnumerator<Line2D> IEnumerable<Line2D>.GetEnumerator() {
-        return LineEnumerator();
-    }
-
     IEnumerator<Point2D> IEnumerable<Point2D>.GetEnumerator() {
         return PointEnumerator();
+    }
+
+    IEnumerator<Line2D> IEnumerable<Line2D>.GetEnumerator() {
+        return LineEnumerator();
     }
 
     private IEnumerator<Point2D> PointEnumerator() {

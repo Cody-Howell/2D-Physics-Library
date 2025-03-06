@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace Physics2DLibrary;
+﻿namespace Physics2DLibrary;
 
 /// <summary>
 /// Class <c>Rotation</c> stores a single RotationAngle as a double (rounded to 2 decimal places) 
@@ -287,6 +285,20 @@ public class Rotation2D : IEquatable<Rotation2D>, IComparable<Rotation2D> {
     }
     #endregion
     #region Operators
+    /// <summary>
+    /// Implicit conversion as a constructor shorthand.
+    /// </summary>
+    public static implicit operator Rotation2D(double value) {
+        return new Rotation2D(value);
+    }
+
+    /// <summary>
+    /// Explicit double retrieval.
+    /// </summary>
+    public static explicit operator double(Rotation2D value) {
+        return value.RotationAngle;
+    }
+
     /// <summary>
     /// Returns a rotation that was flipped on the X axis (shorthand).
     /// </summary>

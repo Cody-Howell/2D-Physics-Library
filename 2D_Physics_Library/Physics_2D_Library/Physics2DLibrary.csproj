@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <Version>0.2.5</Version>
+    <Version>0.7.4</Version>
     <Authors>Howl Dev</Authors>
     <Description>A compilation of useful 2D coordinate/physics classes.</Description>
     <PackageTags>physics</PackageTags>
@@ -23,7 +23,8 @@
 
   <ItemGroup>
     <None Include="README.md" Pack="true" PackagePath="./README.md" />
-    <AdditionalFiles Include="_SharedXML.xml" />
+	<None Include="_HowlDevLogo.png" Pack="true" PackagePath="" />
+	<AdditionalFiles Include="_SharedXML.xml" />
   </ItemGroup>
 
 </Project>
